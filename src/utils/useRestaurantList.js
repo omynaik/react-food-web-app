@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const useRestaurantList = () => {
   const [restaurantList, setRestaurantList] = useState([]);
 
-  console.log("rendered using custom Hook");
+  // console.log("rendered using custom Hook");
 
   useEffect(() => {
     fetchData();
@@ -15,7 +15,7 @@ const useRestaurantList = () => {
     );
     const json = await data.json();
 
-    console.log(json);
+    // console.log(json);
     setRestaurantList(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );

@@ -10,14 +10,14 @@ const Header = () => {
   return (
     //className="header"
     <div className="flex justify-between bg-gradient-to-b bg-pink-100 px-8 py-8 mb-8 w-screen border-b border-pink-700 shadow-2xl">
-      <div className="logo-container">
+      <div className="ml-10">
         <a href="#" style={{ textDecoration: "none" }}>
           <div className="logo text-3xl font-bold bg-gradient-to-r from-pink-500 to-pink-600 text-customPink py-4 px-6 rounded-lg shadow-2xl">
             Food-Villa
           </div>
         </a>
       </div>
-      <div className="nav-items flex flex-row gap-8 align-center">
+      <div className="nav-items flex flex-row gap-8 align-center mr-10">
         <ul className="flex gap-8 items-center font-semibold">
           <li>Online Status : {isOnline ? "✅" : "❌"}</li>
           <li className="transition duration-100 ease-in-out hover:text-blue-500">
