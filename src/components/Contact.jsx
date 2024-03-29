@@ -1,7 +1,10 @@
 const Contact = () => {
   return (
-    <div>
-      <h1>This is a Contact us page</h1>
+    <div className="w-6/12 mx-auto text-center">
+      <p className="text-xl mt-4">
+        You can find my Github account here -{" "}
+        <span className="font-bold">https://github.com/omynaik/</span>
+      </p>
     </div>
   );
 };

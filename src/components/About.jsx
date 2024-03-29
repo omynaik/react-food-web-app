@@ -1,13 +1,8 @@
-import User from "./User";
-import UserClass from "./UserClass";
-
 const About = () => {
   return (
-    <div>
-      <h1>This is an About us Page</h1>
-      <h2>Hello and welcome to the Namaste React web series !!!</h2>
-      <User />
-      <UserClass name={"Omkar Naik (from class based component)"} />
+    <div className="w-6/12 mx-auto text-center">
+      <p className="text-xl font-bold mt-4">Hi, I am Omkar Naik</p>
+      <p className="text-xl mt-4">22 y/o Software Developer from Pune</p>
     </div>
   );
 };
