@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnLogin, setBtnLogin] = useState("Login");
 
   const isOnline = useOnlineStatus();
+
+  //Subscribing to the store using a selector
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
 
   return (
     //className="header"
@@ -49,8 +54,8 @@ const Header = () => {
               Grocery
             </Link>
           </li>
-          <li className="transition duration-100 ease-in-out hover:text-blue-500">
-            Cart
+          <li className="transition duration-100 ease-in-out hover:text-blue-500 hover:cursor-pointer">
+            <Link to="/cart">&#x1F6D2; {cartItems.length} items</Link>
           </li>
         </ul>
         <button
