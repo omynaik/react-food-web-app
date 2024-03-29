@@ -7,6 +7,9 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 // import Grocery from "./components/Grocery";
 
 // Chunking
@@ -21,11 +24,12 @@ const Grocery = lazy(() => {
 
 const AppLayout = () => {
   return (
-    //className="container"
-    <div className="container w-screen pb-10">
-      <Header />
-      <Outlet />
-    </div>
+    <Provider store={appStore}>
+      <div className="container w-screen pb-10">
+        <Header />
+        <Outlet />
+      </div>
+    </Provider>
   );
 };
 
@@ -57,6 +61,10 @@ const appRouter = createBrowserRouter([
             <Grocery />
           </Suspense>
         ),
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
