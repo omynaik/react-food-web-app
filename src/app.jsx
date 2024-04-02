@@ -25,7 +25,7 @@ const Grocery = lazy(() => {
 const AppLayout = () => {
   return (
     <Provider store={appStore}>
-      <div className="container w-screen pb-10">
+      <div className="container w-screen pb-10 overflow-x-hidden">
         <Header />
         <Outlet />
       </div>
